@@ -6,6 +6,7 @@ final openApiKey = dotenv.env['API_Key'];
 
 class WeatherModel {
   Future<dynamic> getCityWeather(String cityName) async {
+    print('apikey: $openApiKey');
     NetworkHelper networkHelper = NetworkHelper(
         urlPath: 'api.openweathermap.org',
         unEncodedPath: '/data/2.5/weather',
